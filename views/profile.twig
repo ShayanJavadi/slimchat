@@ -1,0 +1,25 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+<script type="text/javascript">
+
+</script>
+<h2>Credentials:</h2>
+<ul>
+  <li><h4><b>Name:</b>{{ auth.user.name }}</h4> </li>
+  <li><h4><b>Email:</b>{{ auth.user.email }}</h4> </li>
+
+</ul>
+<h2>Chatrooms you own: </h2>
+<ul>
+{% for chatrooms in chatroomsOwned %}
+<li><a href="{{ path_for('chat.delete-room')}}?room={{ chatrooms }}"><h4><span class="glyphicon glyphicon-trash" aria-hidden="true">&nbsp;</span><a href="{{ path_for('chat.chat-room')}}?room={{ chatrooms }}">{{ chatrooms }}</h4></a></li>
+{% endfor %}
+</ul>
+<a href="{{ path_for('chat.create-room')}}" class="btn btn-secondary btn-sm"><h4>&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true">	 </span> Create new</h4></a>
+<h2>Join a new chatroom: </h2>
+
+<a href="{{ path_for('chat.join-room')}}" class="btn btn-secondary btn-sm"><h4>&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true">	 </span> Join new</h4></a>
+
+
+{% endblock %}

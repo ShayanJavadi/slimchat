@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+body{
+
+  padding-bottom: 40px;
+  background-color: #e5e5e5;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.overflow{
+    overflow-y: scroll;
+    height: 250px;
+}
+
+.middle{
+  text-align: center;
+}
+
+.lineAuthor{
+  color: red;
+}
+#sendButton{
+  background-color: white;
+  color: black;
+  border: black;
+  width: 30%;
+  height: 90px;
+  float: left;
+}
+
+#sendButton:hover{
+  color: white;
+  background-color: black;
+  outline: none;
+}
+#chatinput{
+  float: left;
+  width: 70%;
+}
+textarea:focus{
+  outline: none;
+}
+
+.navbar{
+  color: white;
+}
